@@ -324,7 +324,7 @@ var condicao = false;
 
         if(condicao == false){
             var resposta = `<br>O resultado do cálculo de ${Operação} entre o número <b>${PrimeiroValor.toUpperCase()}</b> na base ${PrimeiraBase} e o numero <b>${SegundoValor.toUpperCase()}</b> na base ${SegundaBase} é
-            <br> Base 10: ${Resultado}
+            <br> Base 10: ${Resultado.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
             <br>Base 2: ${Resultado.toString(2)}
             <br>Base 8: ${Resultado.toString(8)}
             <br>Base 16: ${Resultado.toString(16).toUpperCase()}<br>`
@@ -406,6 +406,7 @@ function conversao(){
         
         if(condicao == false){
             var resposta = `<br>Convertendo o número ${numeroAconverter.toUpperCase()} (${base})<br>
+            <br> Base 10: ${Resultado.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
         Base 10: ${numeroDecimal}
         <br>Base 2: ${numeroDecimal.toString(2)}
         <br>Base 8: ${numeroDecimal.toString(8)}
